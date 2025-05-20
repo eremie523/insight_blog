@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  /* Primary Colors *//* Primary Colors */
+  --color-primary-indigo: #4F46E5; /* indigo-600, used for main buttons, links and accents */
+  --color-primary-purple: #8B5CF6; /* Used in gradients and hover states */
+  
+  /* Light Mode Background Colors */
+  --color-light-main: #FFFFFF; /* bg-white, main background */
+  --color-light-primary: #f3f4f6; /* bg-gray-100, secondary background */
+  --color-light-secondary: #e5e7eb; /* bg-gray-200, secondary background */
+  --color-light-card: #99a1af; /* bg-gray-400, card backgrounds */
+  
+  /* Dark Mode Background Colors */
+  /* --color-dark-main: #111827; /* bg-gray-900, main background */
+  /* --color-dark-secondary: #1F2937; /* bg-gray-800, card backgrounds */
+  /* --color-dark-interactive: #374151; /* bg-gray-700, interactive elements */
+  
+  /* Light Mode Text Colors */
+  --color-dark-primary: #111827; /* text-gray-900, primary text */
+  --color-dark-secondary: #4B5563; /* text-gray-600, secondary text */
+  --color-dark-tertiary: #6B7280; /* text-gray-500, tertiary text */
+  
+  /* Dark Mode Text Colors */
+  /* --color-dark-primary-2: #FFFFFF; /* text-white, primary text */
+  /* --color-dark-secondary-2: #D1D5DB; /* text-gray-300, secondary text */
+  /* --color-dark-tertiary-2: #9CA3AF; /* text-gray-400, tertiary text */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #0a0a0a;
+    --background: #ededed;
+  }
+}
+
+@layer base {
+  body {
+    @apply  text-dark-primary bg-light-secondary
+  }
+
+  main {
+    @apply bg-light-primary
+  }
+}
+
+@layer components {
+
+  .max-container {
+    @apply  xl:px-16 lg:px-10 sm:px-6 px-2 lg:py-12 py-8
+  }
+
+  .h {
+    @apply lg:text-7xl lg:leading-20 text-5xl
+  }
+
+  .h-bold {
+    @apply lg:text-7xl lg:leading-20 text-5xl font-semibold
+  }
+
+  .h1 {
+    @apply lg:text-4xl sm:text-2xl text-xl capitalize text-dark-primary
+  }
+
+  .h1-bold {
+    @apply lg:text-4xl sm:text-2xl text-xl font-semibold capitalize text-dark-primary
+  }
+
+  .h2 {
+    @apply sm:text-lg capitalize text-dark-primary
+  }
+
+  .h2-bold {
+    @apply sm:text-lg sm:font-semibold capitalize text-dark-primary
+  }
+
+  .transition {
+    @apply duration-400 ease-in-out
+  }
+
+  .translate-y--2 {
+    @apply hover:translate-y-[-0.5rem]
+  }
+
+  .translate-x--2 {
+    @apply hover:translate-x-[-0.5rem]
+  }
+
+  .icon-row {
+    @apply flex items-center gap-1
+  }
+
+  .icon-col {
+    @apply flex flex-col items-center gap-1
+  }
+
+  .filter-tag {
+    input:checked {
+      & ~ span {
+        @apply bg-primary-indigo text-light-main!
+      }
+    }
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
