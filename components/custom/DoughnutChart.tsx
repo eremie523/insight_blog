@@ -1,6 +1,6 @@
 import { ArcElement, Chart, DoughnutController, Tooltip } from 'chart.js'
 import React, { useEffect, useState } from 'react'
-import { Doughnut, Pie } from 'react-chartjs-2'
+import { Doughnut } from 'react-chartjs-2'
 
 type ChartProps = {
     color?: string // Hex String Preferably
