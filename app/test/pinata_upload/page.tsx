@@ -34,7 +34,7 @@ const Page = () => {
             pinataGateway: "amber-wrong-cockroach-443.mypinata.cloud"
         })
 
-        const response = await fetch('http://localhost:3000/getPresignedUrlFromThirdPartyService', {
+        const response = await fetch('https://raphina-cardano-production.up.railway.app/getPresignedUrlFromThirdPartyService', {
             method: 'GET',
         }).then((res) => {
             if (res.status !== 200) {
@@ -48,7 +48,7 @@ const Page = () => {
         console.log(upload);
 
         if (upload.cid) {
-            const uploadResponse = await fetch('http://localhost:3000/storeDiagnosis', {
+            const uploadResponse = await fetch('https://raphina-cardano-production.up.railway.app/storeDiagnosis', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

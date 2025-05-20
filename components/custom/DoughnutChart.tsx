@@ -1,5 +1,5 @@
 import { ArcElement, Chart, DoughnutController, Tooltip } from 'chart.js'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Doughnut } from 'react-chartjs-2'
 
 type ChartProps = {
@@ -18,9 +18,9 @@ type ChartProps = {
 const DoughnutChart = (props: ChartProps) => {
     Chart.register(DoughnutController, ArcElement, Tooltip);
 
-    const [data, setData] = useState<{
-        label: string[],
-    }[]>([])
+    // const [data, setData] = useState<{
+    //     label: string[],
+    // }[]>([])
 
     useEffect(() => {
 
